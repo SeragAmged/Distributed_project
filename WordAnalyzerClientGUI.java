@@ -1,40 +1,3 @@
-// import java.rmi.Naming;
-// import javax.swing.JFileChooser;
-// import javax.swing.JFrame;
-// import javax.swing.JOptionPane;
-
-// public class WordAnalyzerClientGUI {
-//     public static void main(String[] args) {
-//         JFrame frame = new JFrame("Word Analyzer Client");
-//         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-//         JFileChooser fileChooser = new JFileChooser();
-//         int result = fileChooser.showOpenDialog(frame);
-//         if (result == JFileChooser.APPROVE_OPTION) {
-//             try {
-//                 WordAnalyzerInterface wordAnalyzer = (WordAnalyzerInterface) Naming.lookup("//localhost/WordAnalyzer");
-//                 String filename = fileChooser.getSelectedFile().getAbsolutePath();
-//                 String [] analysis = wordAnalyzer.analyzeWords(filename);
-//                 JOptionPane.showMessageDialog(frame, "Shortest Word:: " + analysis[0] + "\nLongest Word:: " + analysis[1]+"\n");
-//                 // String longestWord = obj.findLongestWord(filename);
-//                 // String shortestWord = obj.findShortestWord(filename);
-//                 // JOptionPane.showMessageDialog(frame, "Shortest Word: " + shortestWord + "\nLongest Word: " + longestWord);
-//             } catch (Exception e) {
-//                 JOptionPane.showMessageDialog(frame, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-//                 e.printStackTrace();
-//             }
-//         } else {
-//             JOptionPane.showMessageDialog(frame, "No file selected.", "Error", JOptionPane.ERROR_MESSAGE);
-//         }
-
-//         frame.pack();
-//         frame.setVisible(true);
-//     }
-// }
-
-//*********** */
-
-
 import java.rmi.Naming;
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -130,3 +93,32 @@ public class WordAnalyzerClientGUI {
         }
     }
 }
+
+
+// public class WordAnalyzerClientGUI {
+//     public static void main(String[] args) {
+//         JFrame frame = new JFrame("Word Analyzer Client");
+//         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+//         JFileChooser fileChooser = new JFileChooser();
+//         int result = fileChooser.showOpenDialog(frame);
+//         if (result == JFileChooser.APPROVE_OPTION) {
+//             try {
+//                 WordAnalyzerInterface wordAnalyzer = (WordAnalyzerInterface) Naming.lookup("//localhost/WordAnalyzer");
+//                 String filename = fileChooser.getSelectedFile().getAbsolutePath();
+//                 String [] analysis = wordAnalyzer.analyzeWords(filename);
+//                 JOptionPane.showMessageDialog(frame, "Shortest Word:: " + analysis[0] + "\nLongest Word:: " + analysis[1]+"\n");
+//             } catch (Exception e) {
+//                 JOptionPane.showMessageDialog(frame, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+//                 e.printStackTrace();
+//             }
+//         } else {
+//             JOptionPane.showMessageDialog(frame, "No file selected.", "Error", JOptionPane.ERROR_MESSAGE);
+//         }
+
+//         frame.pack();
+//         frame.setVisible(true);
+//     }
+// }
+
+//*********** */
