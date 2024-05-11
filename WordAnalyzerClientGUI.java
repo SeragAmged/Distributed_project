@@ -63,7 +63,7 @@ public class WordAnalyzerClientGUI {
         int result = fileChooser.showOpenDialog(frame);
         if (result == JFileChooser.APPROVE_OPTION) {
             try {
-                WordAnalyzer wordAnalyzer = (WordAnalyzer) Naming.lookup("//localhost/WordAnalyzer");
+                WordAnalyzer wordAnalyzer = (WordAnalyzer) Naming.lookup("//localhost:1099/WordAnalyzer");//stub
                 String filename = fileChooser.getSelectedFile().getAbsolutePath();
                 String[] analysis = wordAnalyzer.analyzeWords(filename);
                 

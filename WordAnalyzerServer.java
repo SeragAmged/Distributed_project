@@ -4,7 +4,7 @@ import java.rmi.registry.LocateRegistry;
 public class WordAnalyzerServer {
     public static void main(String[] args) {
         try {
-            RemoteWordAnalyzer wordAnalyzer = new RemoteWordAnalyzer();
+            RemoteWordAnalyzer wordAnalyzer = new RemoteWordAnalyzer();//skelton
             LocateRegistry.createRegistry(1099);
             Naming.rebind("WordAnalyzer", wordAnalyzer);
             System.out.println("WordAnalyzer Server is ready.");

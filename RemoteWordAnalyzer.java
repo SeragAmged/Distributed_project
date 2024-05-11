@@ -22,7 +22,7 @@ public class RemoteWordAnalyzer extends UnicastRemoteObject implements WordAnaly
                 for (String word : words) {
                     // Remove punctuation
                     word = word.replaceAll("[^a-zA-Z]", "");
-                    if (!word.isEmpty() && word.length() > 3) {
+                    if (!word.isEmpty()) {
                         if (word.length() < shortestLength) {
                             shortestLength = word.length();
                             shortestWord = word;
